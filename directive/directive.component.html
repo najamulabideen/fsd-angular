@@ -1,0 +1,13 @@
+<p class="myClass" style="color: red;">Directive works! Look {{bindingvariable}}</p>
+
+<!-- Loop -->
+<p *ngFor='let i of jsonObj'> 
+    {{ i.val1 }} 
+</p>
+
+<!-- Conditional -->
+<p *ngIf='binaryVar'>Show me!</p>
+<p *ngIf='!binaryVar'>Hide me!</p>
+
+<!-- Forms -->
+<input max="9" width="50px" height="20px" type="text" >
