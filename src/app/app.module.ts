@@ -3,14 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app/app.component';
-import { LoginComponent } from './login/login.component';
-import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DirectiveComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +14,6 @@ import { DirectiveComponent } from './directive/directive.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
