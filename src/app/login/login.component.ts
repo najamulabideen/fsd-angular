@@ -15,7 +15,7 @@ import {
 
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   checkoutForm = this.formBuilder.group({
     name: '',
@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   submit() {
     alert('Logged in successfully!');
