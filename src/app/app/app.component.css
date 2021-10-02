@@ -13,6 +13,7 @@
   h4,
   h5,
   h6 {
+    color: teal;
     margin: 8px 0;
   }
 
@@ -39,6 +40,11 @@
 
   .toolbar img {
     margin: 0 16px;
+  }
+
+  .toolbar span.navlinks a {
+    color: white;
+    margin-left: 5px;
   }
 
   .toolbar #twitter-logo {

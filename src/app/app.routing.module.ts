@@ -1,17 +1,11 @@
-import {
-  NgModule
-} from '@angular/core';
-import {
-  Routes,
-  RouterModule
-} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes,RouterModule} from '@angular/router';
 
+import {LoginComponent} from './login/login.component';
+import {DirectiveComponent} from './directive/directive.component';
 import {
-  LoginComponent
-} from './login/login.component';
-import {
-  DirectiveComponent
-} from './directive/directive.component';
+  ErrComponentComponent
+} from './err-component/err-component.component';
 
 const routes: Routes = [{
     path: '',
@@ -25,6 +19,10 @@ const routes: Routes = [{
   {
     path: 'directive',
     component: DirectiveComponent
+  },
+  {
+    path: '**',
+    component: ErrComponentComponent
   },
 ];
 

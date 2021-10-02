@@ -5,9 +5,6 @@ import {
   BrowserModule
 } from '@angular/platform-browser';
 import {
-  RouterModule
-} from '@angular/router';
-import {
   FormsModule,
   ReactiveFormsModule
 } from '@angular/forms';
@@ -24,12 +21,16 @@ import {
 import {
   DirectiveComponent
 } from './directive/directive.component';
+import {
+  ErrComponentComponent
+} from './err-component/err-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ErrComponentComponent
   ],
   imports: [
     BrowserModule,
