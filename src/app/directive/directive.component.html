@@ -5,9 +5,10 @@
     {{ i.val1 }} 
 </p>
 
+<!-- Forms -->
+<input max="9" width="50px" height="20px" type="text" [(ngModel)]="bindingvariable">
+<button (click)="add(bindingvariable)">Click me!</button>
+
 <!-- Conditional -->
 <p *ngIf='binaryVar'>Show me!</p>
 <p *ngIf='!binaryVar'>Hide me!</p>
-
-<!-- Forms -->
-<input max="9" width="50px" height="20px" type="text" >
