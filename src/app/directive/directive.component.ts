@@ -21,7 +21,7 @@ export class DirectiveComponent implements OnInit {
   constructor(private testService: TestService) {}
 
   ngOnInit(): void {
-    this.jsonObj = this.testService.getViaJson()
+    this.jsonObj = this.testService.getData()
 
     this.binaryVar = true;
 
