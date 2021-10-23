@@ -5,6 +5,7 @@ import {
 import {
   TestService
 } from '../services/test.service';
+import { TestingService } from '../services/testing.service';
 
 @Component({
   selector: 'app-directive',
@@ -18,21 +19,28 @@ export class DirectiveComponent implements OnInit {
   jsonObj: any;
   binaryVar: any;
 
-  constructor(private testService: TestService) {}
+  constructor(private tesService: TestService, private testService: TestingService) {}
 
   ngOnInit(): void {
-    this.jsonObj = this.testService.getData()
+
+    this.bindingvariable = this.testService.getData().val2;
+
+    this.jsonObj = [{
+        val1: 'value 1'
+      },
+      {
+        val1: 'value 3'
+      }
+    ];
 
     this.binaryVar = true;
 
   }
 
-  add(val: String) {
-    this.jsonObj.push (
-      {
-        val1: val + ' 5'
-      }
-    )
+  add(val: any) {
+    this.jsonObj.push({
+      val1: val + ' 5'
+    })
   }
 
 

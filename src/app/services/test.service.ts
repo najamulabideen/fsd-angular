@@ -1,7 +1,7 @@
 import {
   Injectable
 } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class TestService {
   jsonObj: any;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   getData() {
     this.jsonObj = [{
@@ -24,7 +24,7 @@ export class TestService {
   }
 
   getViaJson() {
-    return this.http.get("./assets/mydata.json");
+    // return this.http.get("./assets/mydata.json");
   }
 
 }

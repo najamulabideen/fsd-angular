@@ -2,6 +2,8 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import { TestingService } from '../services/testing.service';
+
 import {
   FormBuilder,
   Validators
@@ -15,7 +17,7 @@ import {
 
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private testService: TestingService) {}
 
   checkoutForm = this.formBuilder.group({
     name: '',
@@ -27,10 +29,20 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
-  ngOnInit(): void {}
+  loginForModel: any;
+
+  ngOnInit(): void {
+    this.getData();
+  };
+
+  getData() {
+    this.loginForModel = this.testService.getData();
+  }
 
   submit() {
-    alert('Logged in successfully!');
+    var variable;
+    variable = this.testService.postData('Logged in successfully!');
+    console.log(variable);
   }
 
 }
