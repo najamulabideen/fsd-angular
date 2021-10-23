@@ -2,6 +2,9 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+import {
+  TestService
+} from '../services/test.service';
 
 @Component({
   selector: 'app-directive',
@@ -15,34 +18,22 @@ export class DirectiveComponent implements OnInit {
   jsonObj: any;
   binaryVar: any;
 
-  constructor() {}
+  constructor(private testService: TestService) {}
 
   ngOnInit(): void {
-    this.jsonObj = [
-      {
-        val1: 'value 1',
-        val2: 'value 2'
-      },
-      {
-        val1: 'value 3',
-        val2: 'value 4'
-      },
-      {
-        val1: 'value 3',
-        val2: 'value 4'
-      },
-      {
-        val1: 'value 3',
-        val2: 'value 4'
-      },
-      {
-        val1: 'value 3',
-        val2: 'value 4'
-      }
-    ];
+    this.jsonObj = this.testService.getViaJson()
 
     this.binaryVar = true;
 
   }
+
+  add(val: String) {
+    this.jsonObj.push (
+      {
+        val1: val + ' 5'
+      }
+    )
+  }
+
 
 }
